@@ -1,12 +1,3 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: ProjectCards.jsx
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 03/06/2023
-*/
-
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { projects } from "../Constants/constants";
@@ -161,8 +152,8 @@ const ProjectCard = ({
 				</div>
 
 				<div className="mt-3">
-					<h3 className="text-white font-bold text-2xl">{name}</h3>
-					<p className="mt-2 text-secondary text-[14px] leading-snug">
+					<h3 className="text-white font-bold text-2xl" style={{fontFamily: 'Elianto-Regular', color: '#3b3b41'}}>{name}</h3>
+					<p className="mt-2 text-secondary text-[14px] leading-snug" style={{color: 'gray', fontFamily: 'Kontakt'}}>
 						{description}
 					</p>
 				</div>

@@ -1,12 +1,3 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: constants.js
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 03/06/2023
-*/
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
 	faGithub,
@@ -40,9 +31,14 @@ import {
 	pawsitivePrototype,
 	psqlIcon,
 	pyIcon,
-	raspIcon,
 	reactIcon,
 	viteIcon,
+	ts,
+	jest,
+	mocha,
+	mysql,
+	mongo,
+	firebase,
 } from "../assets";
 
 library.add(faX, faBars, faWindowRestore, faBagShopping, faDiceD6);
@@ -61,10 +57,15 @@ const media = {
 	pyIcon,
 	viteIcon,
 	nodeIcon,
-	raspIcon,
 	neoIcon,
 	figmaIcon,
 	avatar,
+	ts,
+	jest,
+	mocha,
+	mysql,
+	mongo,
+	firebase,
 };
 
 const icons = {
@@ -81,14 +82,15 @@ const icons = {
 
 const introduction = {
 	text: [
-		"Hello there, I'm so happy you are here! (:",
+		"Welcome",
 
-		"My name is Sara, I'm 20 and a third year computer science student based in Guatemala. I have a strong passion for the technologies related to the data base construction and UX.",
+		`My name is Beck, I have spent this past decade running a successful imports business and managing tech in telecom. Software engineering has long been that new video game playing on a screen that I'd watch through a store window as a kid, thinking, "One day."`,
 
-		"Outside of my regular activities, I'm into drawing whenever I have some free time. I'm also a huge dog lover and enjoy playing chess for fun.",
+		"One day, I came to realize that I was too old to keep thinking it. I took a coding bootcamp at Hack Reactor and I have not been able to stop coding since. Do people actually get paid to do this?",
 
-		"I'm continuously thrilled to partner with individuals and teams who wholeheartedly embrace my fervor for crafting extraordinary experiences. Your visit to my portfolio is deeply appreciated !",
+		"I'm posting some of my work here, in this portfolio space. Whenever you are reading this, you can be sure that there is a LOT more to come.",
 	],
+	textColorClass: "black-text",
 };
 
 export const navLinks = [
@@ -123,9 +125,9 @@ const projects = [
 		demo_link: "https://arasarmemory.netlify.app/",
 	},
 	{
-		name: "Pawsitive",
+		name: "PANEDORA",
 		description:
-			"Explore a user-friendly Figma prototype for an adoption and sterilization awareness website. Experience the sleek design and contribute to a noble cause.",
+			"A unique weather portal that utilizes TensorFlow object recognition to analyze local social media posts and generate an outfit recommendation.",
 		image: pawsitivePrototype,
 		source_code_link: "https://github.com/bl33h/pawsitive",
 		demo_link:
@@ -151,112 +153,105 @@ const skills = [
 		title: "HTML",
 		icon: htmlIcon,
 		description:
-			"I have a strong command of HTML for organizing web pages and generating meaningful content that can be accessed by all users.",
+			"I am comfortably proficienct in HTML, with the skills to effectively structure web pages and create meaningful and accessible content.",
 	},
 	{
 		id: "css",
 		title: "CSS",
 		icon: cssIcon,
 		description:
-			"I possess expertise in utilizing CSS to design web pages and craft visually captivating layouts that enhance the overall user experience.",
+			"My skills encompass leveraging the latest CSS techniques to create visually engaging layouts that elevate the overall user interaction.",
 	},
 	{
 		id: "javascript",
 		title: "JavaScript",
 		icon: jsIcon,
 		description:
-			"I have substantial experience in employing JavaScript to introduce interactivity and functionality into web pages, resulting in dynamic user interfaces.",
+			"My first language is JavaScript. It allows me to infuse web apps with  interactivity, achieving dynamic and responsive user interfaces.",
 	},
 	{
 		id: "react",
 		title: "React",
 		icon: reactIcon,
 		description:
-			"I am well-versed in React, proficient in creating reusable components and managing application state using hooks and context.",
+			"I love React and React Native. My approach is always to greatly compartmentalize my code and achieve maximum reusability of components.",
 	},
 	{
-		id: "java",
-		title: "Java",
-		icon: javaIcon,
+		id: "TypeScript",
+		title: "TypeScript",
+		icon: ts,
 		description:
-			"I have extensive experience utilizing Java for object-oriented programming (OOP) and implementing data structures.",
+			"I am well versed in TypeScript with real work experience collaborating with a team on building mobile apps and online retail platforms.",
 	},
 	{
 		id: "aws",
 		title: "Amazon Web Services",
 		icon: awsIcon,
 		description:
-			"I am certified in AWS and proficient in working with EC2 and RDS instances, leveraging the power of cloud computing for scalable and reliable infrastructure.",
+			"I am experienced in utilising EC2 and RDS instances to host web applications and databases, with and without Docker.",
 	},
 	{
-		id: "figma",
-		title: "Figma",
-		icon: figmaIcon,
+		id: "firebase",
+		title: "Firebase",
+		icon: firebase,
 		description:
-			"In my Figma skills, I unleash creativity, designing captivating user interfaces and collaborating seamlessly with designers and developers.",
-	},
-	{
-		id: "git",
-		title: "Git",
-		icon: gitIcon,
-		description:
-			"I am proficient in Git, managing code changes, collaborating with others, and resolving conflicts effectively.",
+			"I regularly utilize Firebase for authorization and for full hosting of my projects, as well as storing and handling data."
 	},
 	{
 		id: "github",
 		title: "GitHub",
 		icon: githubIcon,
 		description:
-			"I am skilled in using GitHub for seamless project collaboration, code sharing, and issue tracking. Through GitHub, I efficiently create and manage repositories and effectively present my work to potential employers.",
+			"At this point, I am at home on Github, very much used to collaborating with teams, using the best practices to manage healthy projects and resolve any conflicts."
 	},
 	{
 		id: "psql",
 		title: "Postgresql",
 		icon: psqlIcon,
 		description:
-			"I have a strong command of PostgreSQL, encompassing a wide range of skills such as database normalization, triggers, front-end connectivity, and data analysis using software like Power BI.",
+			"I regularly work with PostgreSQL, designing and building databases, migrating, optimizing, expanding and achieving seamless connectivity.",
 	},
 	{
-		id: "vite",
-		title: "Vite",
-		icon: viteIcon,
+		id: "jest",
+		title: "Jest",
+		icon: jest,
 		description:
-			"I have gained considerable experience working with Vite for approximately six months, leveraging its capabilities to build React websites and seamlessly deploy them on platforms like Netlify.",
+			"I often utilize Jest for testing my React applications. I find it to be a very intuitive and elaborate framework.",
 	},
 	{
-		id: "py",
-		title: "Python",
-		icon: pyIcon,
+		id: "mocha",
+		title: "Mocha",
+		icon: mocha,
 		description:
-			"With 3 years of Python experience, I am adept at coding functions and creating graphic interfaces using Tkinter.",
+			"For a quick and easy test runner, I often utilize the Mocha framework. Combining it with the Chai library covers a lot of my needs.",
+	},
+	{
+		id: "mysql",
+		title: "MySQL",
+		icon: mysql,
+		description:
+			"Although relational databases work somewhat similarly, I do want to note that I am experienced with the most popular ones, which has to include MySQL.",
+	},
+	{
+		id: "mongo",
+		title: "MongoDB",
+		icon: mongo,
+		description:
+			"I am just as comfortable with non-relational databases like MongoDB. I have designed, built, intergated and edited MongoDB for a couple of team projects. I am using it for a project right now.",
 	},
 	{
 		id: "node",
 		title: "Node",
 		icon: nodeIcon,
 		description:
-			"When it comes to building web applications, I prefer using Node as my runtime environment over Yarn. I have expertise in leveraging Node.js to develop powerful and scalable web applications.",
-	},
-	{
-		id: "neo",
-		title: "Neo4j",
-		icon: neoIcon,
-		description:
-			"I am knowledgeable in Neo4j, the graph database management system. I have expertise in utilizing GraphOS to build robust recommendation systems, leveraging the strength of graph-based data modeling.",
-	},
-	{
-		id: "raspi",
-		title: "Raspberry Pi",
-		icon: raspIcon,
-		description:
-			"I have hands-on experience with Raspberry Pi, where I utilized a virtual Linux machine to execute programs written in assembly language. This allowed me to explore low-level computing and develop efficient code for the Raspberry Pi platform.",
+			"Node is normally my environment of choice when building web applications, even though I have worked in others without issues, including Yarn.",
 	},
 	{
 		id: "eslint",
 		title: "Eslint",
 		icon: eslintIcon,
 		description:
-			"I utilize ESLint to identify and resolve code issues, as well as standardize the structure of my projects. With ESLint, I ensure code quality and consistency throughout my development process.",
+			"I find that using ESLint enforces consistency so I prefer to always use it in order to keep my code neat and well organized.",
 	},
 ];
 

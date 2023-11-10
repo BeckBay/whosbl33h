@@ -96,7 +96,7 @@ export const heroOptions = {
         duration: 0.4,
         size: 40,
         color: {
-          value: '#cbbde5',
+          value: '#a9b0b4',
         },
         opacity: 8,
         mix: false,
@@ -117,7 +117,7 @@ export const heroOptions = {
       mode: 'bounce',
     },
     color: {
-      value: '#fff',
+      value: 'black',
     },
     move: {
       angle: {
@@ -125,8 +125,8 @@ export const heroOptions = {
         value: 90,
       },
       center: {
-        x: 50,
-        y: 50,
+        x: 30,
+        y: 30,
         mode: 'percent',
         radius: 0,
       },
@@ -140,7 +140,7 @@ export const heroOptions = {
     },
     number: {
       limit: 0,
-      value: 30,
+      value: 50,
     },
 
     opacity: {
@@ -168,7 +168,7 @@ export const heroOptions = {
           fill: true,
           font: 'Font Awesome 6 Brands',
           style: '',
-          value: ['\uf13b'],
+          value: ['\uf09b'],
           weight: '400',
         },
         {
@@ -192,13 +192,41 @@ export const heroOptions = {
           value: ['\uf41b'],
           weight: '400',
         },
+        {
+          fill: true,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: ['\uf3d3'],
+          weight: '400',
+        },
+        {
+          fill: true,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: ['\uf13b'],
+          weight: '400',
+        },
+        {
+          fill: true,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: ['\uf375'],
+          weight: '400',
+        },
+        {
+          fill: true,
+          font: 'Font Awesome 6 Brands',
+          style: '',
+          value: ['\uf395'],
+          weight: '400',
+        },
       ],
     },
 
     size: {
       random: {
         enable: true,
-        minimumValue: 25,
+        minimumValue: 15,
         maxValue: 35,
       },
       animation: {
@@ -215,10 +243,10 @@ export const heroOptions = {
     lineLinked: {
       blink: false,
       color: {
-        value: '#ffffff',
+        value: '#000000',
       },
       consent: true,
-      distance: 100,
+      distance: 120,
       enable: true,
       frequency: 10,
       opacity: 0.4,
