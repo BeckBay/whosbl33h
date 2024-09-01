@@ -1,22 +1,9 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: HeroText.jsx
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 03/06/2023
-*/
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const HeroText = () => {
-  const name = "A CLEAN";
-  const name2 = "SLATE";
+  const name = "PAST";
 
   return (
-    <div
-      className="noselect w-fit h-fit text-grayscale-50 absolute z-10 flex flex-col justify-center items-center rounded-[50%]"
-      id="repulse-div"
-    >
       <LazyMotion features={domAnimation} strict>
         <m.h1
           initial={{ opacity: 0 }}
@@ -37,28 +24,8 @@ const HeroText = () => {
               return (
                 <span
                   key={index}
-                  className="text-primary-400 shimmer"
+                  className="text-primary-400 shimmer m-20"
                   style={{ fontSize: "1.2em", color: 'white' }}
-                >
-                  {char}
-                </span>
-              );
-            })}
-          </m.div>
-          <m.div
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.6, type: "spring" }}
-          >
-            {name2.split("").map((char, index) => {
-              if (char === " ") {
-                return " ";
-              }
-              return (
-                <span
-                  key={index}
-                  className="text-primary-400 shimmer"
-                  style={{ fontSize: "1.2em", color: 'white'}}
                 >
                   {char}
                 </span>
@@ -67,7 +34,85 @@ const HeroText = () => {
           </m.div>
         </m.h1>
       </LazyMotion>
-    </div>
+  );
+};
+
+export const HeroTextNow = () => {
+  const name = "TODAY";
+  const colors = ['gray'];
+
+
+  return (
+    <LazyMotion features={domAnimation} strict>
+           <m.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, type: "spring" }}
+          className="text-center flex justify-center items-center flex-col opacity-100 text-7xl sm:text-9xl cursor-default"
+          style={{ fontFamily: "Elianto-Regular" }}
+        >
+        <m.div
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.6, type: "spring" }}
+          >
+          {name.split("").map((char, index) => {
+            if (char === " ") {
+              return " ";
+            }
+            const colorIndex = index % colors.length;
+            return (
+              <span
+                key={index}
+                className={`text-primary-400 shimmernow m-10`}
+
+                style={{ fontSize: "1.2em", color: colors[colorIndex] }}
+              >
+                {char}
+              </span>
+            );
+          })}
+        </m.div>
+      </m.h1>
+    </LazyMotion>
+  );
+};
+
+
+export const HeroTextNext = () => {
+  const name = "FUTURE?";
+
+  return (
+      <LazyMotion features={domAnimation} strict>
+        <m.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, type: "spring" }}
+          className="text-center flex justify-center items-center flex-col opacity-100 text-7xl sm:text-9xl cursor-default"
+          style={{ fontFamily: "Elianto-Regular" }}
+        >
+          <m.div
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.6, type: "spring" }}
+          >
+            {name.split("").map((char, index) => {
+              if (char === " ") {
+                return " ";
+              }
+              return (
+                <span
+                  key={index}
+                  className="text-primary-400 shimmernow m-10"
+                  style={{ fontSize: "1.2em", color: '#A42A04' }}
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </m.div>
+        </m.h1>
+      </LazyMotion>
   );
 };
 

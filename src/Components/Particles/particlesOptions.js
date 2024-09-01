@@ -1,12 +1,3 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: particleOptions.js
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 02/06/2023
-*/
-
 export const heroOptions = {
   autoPlay: true,
 
@@ -16,10 +7,9 @@ export const heroOptions = {
   },
 
   detectRetina: true,
-  fpsLimit: 120,
+  fpsLimit: 50,
 
   interactivity: {
-    detectsOn: '#hero',
     events: {
       onDiv: [
         {

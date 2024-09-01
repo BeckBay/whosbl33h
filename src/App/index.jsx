@@ -7,6 +7,9 @@ import App from "./App";
 import "./index.css";
 import "font-awesome/css/font-awesome.min.css";
 import "../../public/Fonts/Morganite/morganiteFont.css";
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

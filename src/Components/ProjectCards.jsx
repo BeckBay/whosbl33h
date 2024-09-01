@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { projects } from "../Constants/constants";
 import { githubIcon } from "../assets";
-import { styles } from "../styles";
+import {useState} from 'react';
+import Modal from 'react-modal';
+
 
 export const staggerContainer = (staggerChildren, delayChildren) => {
 	return {
@@ -117,12 +119,25 @@ const ProjectCard = ({
 	description,
 	image,
 	source_code_link,
-	demo_link,
 }) => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = (e) => {
+		console.log('log', isModalOpen)
+
+		 e.stopPropagation();
+    setIsModalOpen(false);
+  };
+
 	return (
+		<div className="relative cursor-pointer" onClick={openModal}>
 		<motion.div
 			variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-			className="p-5 rounded-lg sm:w-[280px] w-[80%] "
+			className="rounded-lg sm:w-[300px] w-[100%] "
 		>
 			<Tilt
 				options={{
@@ -135,12 +150,13 @@ const ProjectCard = ({
 					<img
 						src={image}
 						alt={name}
-						className="w-[full] h-[full] md:h-[200px]  object-cover rounded-lg"
+						className="w-[full] h-[full] md:h-[250px]  object-cover rounded-lg"
 					/>
-					<div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+					<div className="absolute inset-0 flex flex-col justify-end items-end m-3 card-img_hover">
 						<div
-							onClick={() => window.open(source_code_link, "_blank")}
-							className="w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
+							onClick={() => {window.open(source_code_link, "_blank")
+							setIsModalOpen(false)}}
+							className="w-8 h-8 rounded-full flex justify-center items-center cursor-pointer mr-5 "
 						>
 							<img
 								src={githubIcon}
@@ -152,29 +168,35 @@ const ProjectCard = ({
 				</div>
 
 				<div className="mt-3">
-					<h3 className="text-white font-bold text-2xl" style={{fontFamily: 'Elianto-Regular', color: '#3b3b41'}}>{name}</h3>
-					<p className="mt-2 text-secondary text-[14px] leading-snug" style={{color: 'gray', fontFamily: 'Kontakt'}}>
+					<h3 className="text-l">{name}</h3>
+					<p className="mt-1 text-secondary text-[12px] leading-snug">
 						{description}
 					</p>
 				</div>
 				<div className="mt-2 flex flex-wrap gap-1"></div>
-				<div className="mt-3 flex justify-center items-center">
-					<a
-						className="shadow-md shadow-primary p-2 bg-tertiary rounded-lg flex justify-center"
-						href={demo_link}
-						target="_blank"
-					>
-						See the Demo
-					</a>
-				</div>
 			</Tilt>
+
+			<Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        className="modal-content"
+        overlayClassName="modal-overlay"
+        contentLabel="Enlarged Image Modal"
+      >
+
+        <button className="modal-close" onClick={closeModal}>
+				&#x2718;
+        </button>
+        <img src={image} alt={name} className="modal-image" />
+      </Modal>
 		</motion.div>
+		</div>
 	);
 };
 
 const Works = () => {
 	return (
-		<div className="mt-5 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-7 text-grayscale-50 w-full justify-items-center place-content-center">
+		<div className="mt-n1 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-7 w-full justify-items-center place-content-center" style={{fontFamily: 'Kontakt', color: '#48494b'}}>
 			{projects.map((project, index) => (
 				<ProjectCard key={`project-${index}`} index={index} {...project} />
 			))}

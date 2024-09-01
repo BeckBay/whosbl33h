@@ -16,29 +16,24 @@ import {
 import {
 	avatar,
 	awsIcon,
-	calculator,
+	fanplea,
 	cssIcon,
 	eslintIcon,
-	figmaIcon,
-	gitIcon,
 	githubIcon,
 	htmlIcon,
-	javaIcon,
 	jsIcon,
-	memoryGame,
-	neoIcon,
+	parking,
 	nodeIcon,
-	pawsitivePrototype,
+	panedora,
 	psqlIcon,
-	pyIcon,
-	reactIcon,
-	viteIcon,
 	ts,
 	jest,
 	mocha,
 	mysql,
 	mongo,
 	firebase,
+	docker,
+	reactIcon,
 } from "../assets";
 
 library.add(faX, faBars, faWindowRestore, faBagShopping, faDiceD6);
@@ -49,16 +44,10 @@ const media = {
 	jsIcon,
 	reactIcon,
 	awsIcon,
-	javaIcon,
-	gitIcon,
 	githubIcon,
 	psqlIcon,
 	eslintIcon,
-	pyIcon,
-	viteIcon,
 	nodeIcon,
-	neoIcon,
-	figmaIcon,
 	avatar,
 	ts,
 	jest,
@@ -66,6 +55,7 @@ const media = {
 	mysql,
 	mongo,
 	firebase,
+	docker,
 };
 
 const icons = {
@@ -82,13 +72,8 @@ const icons = {
 
 const introduction = {
 	text: [
-		"Welcome",
 
-		`My name is Beck, I have spent this past decade running a successful imports business and managing tech in telecom. Software engineering has long been that new video game playing on a screen that I'd watch through a store window as a kid, thinking, "One day."`,
-
-		"One day, I came to realize that I was too old to keep thinking it. I took a coding bootcamp at Hack Reactor and I have not been able to stop coding since. Do people actually get paid to do this?",
-
-		"I'm posting some of my work here, in this portfolio space. Whenever you are reading this, you can be sure that there is a LOT more to come.",
+		`Beck',
 	],
 	textColorClass: "black-text",
 };
@@ -96,51 +81,40 @@ const introduction = {
 export const navLinks = [
 	{
 		id: "about",
-		title: "About",
+		title: "PAST",
 	},
 	{
 		id: "projects",
-		title: "Projects",
-	},
-	{
-		id: "skills",
-		title: "Skills",
+		title: "THE ONE DAY",
 	},
 	{
 		id: "contact",
-		title: "Contact",
+		title: "FUTURE",
 	},
 ];
 
 const projects = [
-
-
-
 	{
-		name: "Arasartara's Gallery",
+		name: "ParKing Mobile App",
 		description:
-			"A memory game with an art theme implemented with React. Test your memory skills and enjoy beautiful artwork as you match pairs of cards in this engaging game.",
-		image: memoryGame,
-		source_code_link: "https://github.com/bl33h/artMemoryGame",
-		demo_link: "https://arasarmemory.netlify.app/",
+			"A fully featured mobile app for a valet service that allows making reservations, as well as managing and operating a valet business.",
+		image: parking,
+		source_code_link: "https://github.com/BeckBay/pkreadme/blob/03659571921c99c7ceb13c3f2b0a3892a68d28f7/README.md",
 	},
 	{
-		name: "PANEDORA",
+		name: "PANEDORA WEATHER",
 		description:
-			"A unique weather portal that utilizes TensorFlow object recognition to analyze local social media posts and generate an outfit recommendation.",
-		image: pawsitivePrototype,
-		source_code_link: "https://github.com/bl33h/pawsitive",
-		demo_link:
-			"https://www.figma.com/proto/zhK8DMa7uPyQIcHxkemIcx/Pawsitive?type=design&node-id=40-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=40%3A2",
+			"A unique weather portal that utilizes object recognition to analyze local social media and generate outfit recommendations.",
+		image: panedora,
+		source_code_link: "https://github.com/BeckBay/panedorasample/blob/3263a4de89d86a8d240ff384c6d223ea9ed3000b/Analyzer.jsx",
 	},
 	{
-		name: "Basic Calculator",
+		name: "FANPLEA",
 		description:
-			"A completely functional basic calculator website created with React. It allows you to perform mathematical calculations effortlessly. With testing implemented, the results are accurate.",
-		image: calculator,
-		source_code_link: "https://github.com/bl33h/calculator",
-		demo_link: "https://bl33hscalculator.netlify.app/",
-	},
+			"A reworked FanPlea is launching very soon! It is a platform for fans to launch and sponsor new projects with their favorite artists.",
+		image: fanplea,
+		source_code_link: "https://fanplea-test.netlify.app",
+	}
 ];
 
 const memoji = {
@@ -161,6 +135,13 @@ const skills = [
 		icon: cssIcon,
 		description:
 			"My skills encompass leveraging the latest CSS techniques to create visually engaging layouts that elevate the overall user interaction.",
+	},
+	{
+		id: "node",
+		title: "Node",
+		icon: nodeIcon,
+		description:
+			"Node is normally my environment of choice when building web applications, even though I have worked in others without issues, including Yarn.",
 	},
 	{
 		id: "javascript",
@@ -191,6 +172,13 @@ const skills = [
 			"I am experienced in utilising EC2 and RDS instances to host web applications and databases, with and without Docker.",
 	},
 	{
+		id: "docker",
+		title: "Docker",
+		icon: docker,
+		description:
+			"Docker is another tool I use regularly to host and migrate web sites, apps, and databases.",
+	},
+	{
 		id: "firebase",
 		title: "Firebase",
 		icon: firebase,
@@ -203,13 +191,6 @@ const skills = [
 		icon: githubIcon,
 		description:
 			"At this point, I am at home on Github, very much used to collaborating with teams, using the best practices to manage healthy projects and resolve any conflicts."
-	},
-	{
-		id: "psql",
-		title: "Postgresql",
-		icon: psqlIcon,
-		description:
-			"I regularly work with PostgreSQL, designing and building databases, migrating, optimizing, expanding and achieving seamless connectivity.",
 	},
 	{
 		id: "jest",
@@ -226,6 +207,13 @@ const skills = [
 			"For a quick and easy test runner, I often utilize the Mocha framework. Combining it with the Chai library covers a lot of my needs.",
 	},
 	{
+		id: "psql",
+		title: "Postgresql",
+		icon: psqlIcon,
+		description:
+			"I regularly work with PostgreSQL, designing and building databases, migrating, optimizing, expanding and achieving seamless connectivity.",
+	},
+	{
 		id: "mysql",
 		title: "MySQL",
 		icon: mysql,
@@ -237,14 +225,7 @@ const skills = [
 		title: "MongoDB",
 		icon: mongo,
 		description:
-			"I am just as comfortable with non-relational databases like MongoDB. I have designed, built, intergated and edited MongoDB for a couple of team projects. I am using it for a project right now.",
-	},
-	{
-		id: "node",
-		title: "Node",
-		icon: nodeIcon,
-		description:
-			"Node is normally my environment of choice when building web applications, even though I have worked in others without issues, including Yarn.",
+			"I am just as comfortable with non-relational databases. I have fully designed, built, intergated and edited MongoDB for several group projects."
 	},
 	{
 		id: "eslint",

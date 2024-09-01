@@ -1,12 +1,3 @@
-/*
-   Copyright (C), 2023-2024, Sara Echeverria (bl33h)
-   Author: Sara Echeverria
-   FileName: ContactForm.jsx
-   Version: I
-   Creation: 02/06/2023
-   Last modification: 03/06/2023
-*/
-
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
@@ -19,7 +10,7 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		emailjs
-			.sendForm("whoisbl33h", "template1", e.target, "JjC_Nnt4rUsjIsRtz")
+			.sendForm("zandak", "temp1", e.target, "4k3K7KE6nt4RMsMbl")
 			.then(
 				(result) => {
 					document.getElementById("contact_form").reset();
@@ -45,10 +36,10 @@ const ContactForm = () => {
 		>
 			<div>
 				<h2
-					style={{ fontFamily: "Morganite Bold, sans-serif" }}
-					className="message text-7xl bg-primary-600 p-2 rounded-xl text-grayscale-200 text-center rounded-br-[0%] relative shadow-2xl"
+					style={{ fontFamily: "Elianto-Regular", backgroundColor: '#A42A04'}}
+					className="message text-5xl bg-primary-600 p-2 rounded-xl text-grayscale-200 text-center rounded-br-[0%] relative shadow-2xl"
 				>
-					<Typewriter words={["Let's get in touch!"]} loop={true} />
+					<Typewriter words={["Contact Me"]} loop={true} />
 					&nbsp;
 				</h2>
 			</div>
@@ -106,7 +97,8 @@ const ContactForm = () => {
 					</div>
 					<div className="w-full flex justify-center">
 						<input
-							className="w-[100px] h-[50px] bg-primary-600 rounded-xl cursor-pointer hover:bg-primary-700"
+							style={{backgroundColor: '#A42A04'}}
+							className="w-[100px] h-[50px] rounded-xl cursor-pointer hover:bg-primary-700"
 							type="submit"
 							value={!isSent ? "Send" : "Done!"}
 						/>
